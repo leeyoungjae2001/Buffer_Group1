@@ -1,0 +1,172 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+:root {
+    --accent: #3DB45E;
+    --dark: #ffffff;
+    --light: #f4f4f4;
+    --overlay: rgba(23,25,29,0.5);
+    --ease: all 0.3s ease 0s;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--dark);
+}
+
+p, button, h1, h4 {
+    color: var(--light);
+}
+
+p, h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+h4, button {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 80px;
+    margin-bottom: 70px;
+}
+
+p, h4 {
+    font-size: 25px;
+}
+
+button {
+    cursor: pointer;
+    transition: var(--ease);
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+
+.pager{position: fixed; top: 50%; left: 50%; margin-left: 600px; z-index: 200; transform: translateY(-50%)}
+.pager li{margin: 8px 0}
+.pager li a{display: block; width: 16px; height: 16px; border: 2px solid #ccc; border-radius: 50%; text-indent: -9999px;}
+.pager .on a{background: #ccc}
+
+.cover1{
+    grid-area: cover1;
+    min-height: 935px;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-areas: 
+    ". header1 .";
+    background: linear-gradient(var(--overlay),var(--overlay)), url(../img/cover1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.cover1_header {
+    grid-area: header1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+header p {
+    margin-bottom: 30px;
+}
+
+header button {
+    width: 131px;
+    padding: 12px 0;
+    background-color: var(--accent);
+    border: none;
+}
+
+.profile{
+    grid-area: profile;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-areas: 
+    ". header2 .";
+    background:linear-gradient(var(--overlay),var(--overlay)), url(../img/cover2.jpg)no-repeat 100% 0 fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.profile_header{
+    grid-area: header2;
+    text-align: center;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.profile_header img{
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+.profile_header p{
+    margin-bottom: 30px;
+}
+.profile_header hr{
+    margin-bottom: 30px;
+}
+
+.profile_t{
+    grid-area: profile_t;
+    min-height: 935px;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-areas: 
+    ". header3 .";
+    background: linear-gradient(var(--overlay),var(--overlay)), url(../img/cover3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.profile_tables{
+    grid-area: header3;
+    text-align: center;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px;
+    text-align: center;
+}
+.profile_tables tr{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+.profile_tables td{
+    background-color: gray;
+    border: 1px solid white;
+}
+
+.me{background: url(../img/bg2.jpg)no-repeat 50% 0 fixed;}
+.portfolio{position: relative;}
+.po1{background: #f5f3ec}
+.po3{background: #fff0f0}
+.btn{position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%)}
+.btn p{float: left}
+.btn a{display: block; width: 67px; height: 67px; margin: 15px; text-indent: -9999px;}
+.po1 .bt1 a{background: url(../img/go_site1.png)no-repeat}
+.po1 .bt2 a{background: url(../img/go_ppt1.png)no-repeat}
+.po2 .bt1 a{background: url(../img/go_site2.png)no-repeat}
+.po2 .bt5 a{background: url(../img/go_ppt1.png)no-repeat}
+.po3 .bt1 a{background: url(../img/go_site3.png)no-repeat}
+.po3 .bt3 a{background: url(../img/go_site4.png)no-repeat}
+.po4 .bt4 a{background: url(../img/go_site5.png)no-repeat}
+.po4 .bt6 a{background: url(../img/go_ppt2.png)no-repeat}
+.etc{background: url(../img/bg3.jpg)no-repeat 50% 0 fixed;}
+.cover2{width: 100%;height: 974px; background: url(../img/cover2.jpg)no-repeat 50% 0; text-indent: -9999px;}
